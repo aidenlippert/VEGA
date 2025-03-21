@@ -1,0 +1,26 @@
+[package]
+name = "vegastar"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ssi = "0.7.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.36", features = ["full"] }
+ed25519-dalek = "2.1.1"
+rand = "0.8"
+multibase = "0.9"
+uuid = { version = "1.8", features = ["v4"] }
+chrono = "0.4"
+anyhow = "1.0"
+tch = "0.17"
+bellman = "0.14"
+sled = "0.34"
+bls12_381 = "0.8"
+base64 = "0.22"
+hex = "0.4"  # Added
+
+[dev-dependencies]
+vegagate = { path = "../vegagate" }
+vegastore = { path = "../vegastore" }

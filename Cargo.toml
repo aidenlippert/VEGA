@@ -1,0 +1,50 @@
+[workspace]
+members = [
+    "src/lib/vegastar",
+    "src/lib/vegagate",
+    "src/lib/vegastore",
+    "src/lib/veganet",
+    "src/lib/vegacode",
+    "src/lib/vegaflux",
+    "src/lib/vegaframe",
+    "src/lib/vegagrid",
+    "src/lib/vegawave",
+    "src/bin/vega-node",
+    # Removed "src/bin/vega-cli"
+]
+resolver = "2"
+
+[package]
+name = "vega"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+tokio = { version = "1.36", features = ["full"] }
+clap = { version = "4.5", features = ["derive"] }
+serde_json = "1.0"
+ssi = "0.7.0"
+hex = "0.4"
+vegastar = { path = "src/lib/vegastar" }  # Added for CLI
+vegagate = { path = "src/lib/vegagate" }  # Added for CLI
+vegastore = { path = "src/lib/vegastore" }  # Added for CLI
+
+[dev-dependencies]
+vegastar = { path = "src/lib/vegastar" }
+vegagate = { path = "src/lib/vegagate" }
+vegastore = { path = "src/lib/vegastore" }
+
+[workspace.dependencies]
+ed25519-dalek = "2.1.1"
+rand = "0.8.5"
+tch = "0.17.0"
+vegastar = { path = "src/lib/vegastar" }
+vegagate = { path = "src/lib/vegagate" }
+vegastore = { path = "src/lib/vegastore" }
+veganet = { path = "src/lib/veganet" }
+ssi = "0.7.0"
+
+[[bin]]
+name = "vega-cli"
+path = "src/bin/vega-cli/main.rs"

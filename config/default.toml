@@ -1,0 +1,2 @@
+[network]
+listen_addr = "/ip4/0.0.0.0/tcp/4001"

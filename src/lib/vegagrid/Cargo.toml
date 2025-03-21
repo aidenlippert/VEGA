@@ -1,0 +1,10 @@
+[package]
+name = "vegagrid"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ipfs-api = { version = "0.17.0", features = ["with-hyper-rustls"] }
+tokio = { version = "1.36", features = ["full"] }
+sodiumoxide = "0.2"
+anyhow = "1.0"

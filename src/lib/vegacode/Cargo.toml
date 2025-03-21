@@ -1,0 +1,8 @@
+[package]
+name = "vegacode"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tch = "0.17"  # Updated to 0.17
+anyhow = "1.0"

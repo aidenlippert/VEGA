@@ -1,0 +1,10 @@
+[package]
+name = "vegaflux"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.36", features = ["full"] }
+anyhow = "1.0"
+tch = "0.17.0" # Updated from 0.13
+rand = "0.8"
